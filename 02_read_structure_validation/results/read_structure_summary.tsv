@@ -1,0 +1,9 @@
+Sample	Read	Read_length	sgRNA_extraction	Observed_structure
+07-01	R1	151	82-120	Constant-sgRNA/scaffold-constant
+07-01	R2	151	63-101	Constant-scaffold-sgRNA-constant
+07-02	R1	151	82-120	Constant-sgRNA/scaffold-constant
+07-02	R2	151	63-101	Constant-scaffold-sgRNA-constant
+07-03	R1	151	82-120	Constant-sgRNA/scaffold-constant
+07-03	R2	151	63-101	Constant-scaffold-sgRNA-constant
+07-04	R1	151	82-120	Constant-sgRNA/scaffold-constant
+07-04	R2	151	63-101	Constant-scaffold-sgRNA-constant
