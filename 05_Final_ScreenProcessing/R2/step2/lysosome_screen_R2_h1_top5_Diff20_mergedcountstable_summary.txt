@@ -1,0 +1,3 @@
+Diff	Rep1	17489130
+Lower	Rep1	12871079
+Upper	Rep1	11157950

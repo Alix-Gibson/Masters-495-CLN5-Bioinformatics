@@ -1,0 +1,3 @@
+Diff	Rep1	/projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step1/output/count_files/21062D-07-04_S105_L006_R1_001_CRISPRi_v2_human.trim_1_39_forward.fa_h1_top5_Diff20.counts	16786184
+Lower	Rep1	/projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step1/output/count_files/21062D-07-02_S103_L006_R1_001_CRISPRi_v2_human.trim_1_39_forward.fa_h1_top5_Diff20.counts	12312343
+Upper	Rep1	/projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step1/output/count_files/21062D-07-01_S102_L006_R1_001_CRISPRi_v2_human.trim_1_39_forward.fa_h1_top5_Diff20.counts	10686843

@@ -1,0 +1,81 @@
+#############################################################
+## Experiment Settings
+#############################################################
+
+[experiment_settings]
+
+output_folder = /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step2
+experiment_name = lysosome_screen_R1_h1_top5_Diff20
+
+
+#############################################################
+## Library Settings
+#############################################################
+
+[library_settings]
+
+library = CRISPRi_v2_human
+sublibraries = h1_top5
+
+
+#############################################################
+## Counts Files
+#############################################################
+
+[counts_files]
+
+counts_file_string =
+    /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step1/output/count_files/21062D-07-01_S102_L006_R1_001_CRISPRi_v2_human.trim_1_39_forward.fa_h1_top5_Diff20.counts:Upper|Rep1
+    /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step1/output/count_files/21062D-07-02_S103_L006_R1_001_CRISPRi_v2_human.trim_1_39_forward.fa_h1_top5_Diff20.counts:Lower|Rep1
+    /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/Final_ScreenProcessing/ScreenProcessing/R1/step1/output/count_files/21062D-07-04_S105_L006_R1_001_CRISPRi_v2_human.trim_1_39_forward.fa_h1_top5_Diff20.counts:Diff|Rep1
+
+#############################################################
+## Filter Settings
+#############################################################
+
+[filter_settings]
+
+filter_type = either
+minimum_reads = 1
+
+
+#############################################################
+## sgRNA Analysis
+#############################################################
+
+[sgrna_analysis]
+
+condition_string =
+    upper:Diff:Upper
+    lower:Diff:Lower
+
+pseudocount_behavior = zeros only
+pseudocount = 1
+
+#############################################################
+## Growth Values
+#############################################################
+
+[growth_values]
+
+growth_value_string =
+    upper:Rep1:1
+    lower:Rep1:1
+
+#############################################################
+## Gene Analysis
+#############################################################
+
+[gene_analysis]
+
+collapse_to_transcripts = False
+
+generate_pseudogene_dist = auto
+
+calculate_ave = True
+best_n = 3
+
+calculate_mw = True
+
+calculate_nth = False
+nth = 2
