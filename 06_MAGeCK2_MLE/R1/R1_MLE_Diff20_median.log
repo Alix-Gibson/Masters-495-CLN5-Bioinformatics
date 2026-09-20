@@ -1,0 +1,872 @@
+INFO  @ Tue, 18 Aug 2026 10:46:03: Parameters: /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/MAGeCK_2/mageck2/bin/mageck2 mle -k /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/MAGeCK_2/MAGeCK_MLE/MAGeCK2_R1/count/R1_MAGECK_counts_Diff20_only.txt -d /projects/health_sciences/bms/biochemistry/hughes_lab/AlixGibson/MAGeCK_2/MAGeCK_MLE/MAGeCK2_R1/design_R1_Diff_baseline.txt --norm-method median --threads 8 -n R1_MLE_Diff20_median 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Cannot parse design matrix as a string; try to parse it as a file name ... 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Design matrix: 
+INFO  @ Tue, 18 Aug 2026 10:46:05: [[1. 0. 0.] 
+INFO  @ Tue, 18 Aug 2026 10:46:05:  [1. 1. 0.] 
+INFO  @ Tue, 18 Aug 2026 10:46:05:  [1. 0. 1.]] 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Beta labels:baseline,Lower,Upper 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Included samples:Diff,Lower,Upper 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Loaded samples:Diff;Lower;Upper 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Sample index: 0;1;2 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Loaded 2232 genes. 
+DEBUG @ Tue, 18 Aug 2026 10:46:05: Initial (total) size factor: 0.7901390929305979 1.0770648089128418 1.240770515168808 
+DEBUG @ Tue, 18 Aug 2026 10:46:05: Median factor: 0.13084596588938485 11.952940693044352 1.5478164103248078 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Final size factor: 0.13084596588938485 11.952940693044352 1.5478164103248078 
+WARNING @ Tue, 18 Aug 2026 10:46:05: Some samples have unusually small or large normalization factors (<0.2 or >5). Please double-check with the normalization process. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: size factor: 7.642574176458634,0.08366142070644753,0.6460714548117182 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 0: total 1 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 2: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 3: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 4: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 1: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 5: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 7: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 6: total 0 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Modeling the mean and variance ... 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Run the algorithm for the second time ... 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Skipping gene non-targeting from MLE calculation since there are too many sgRNAs. To change, revise the --max-sgrnapergene-permutation option. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 7: total 278 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:05: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:06: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:06: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:46:57: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:09: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Permuting groups of gene with 1 sgRNAs per gene. Group progress: 1/12 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:15: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:16: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Permuting groups of gene with 2 sgRNAs per gene. Group progress: 2/12 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:17: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:18: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:18: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:18: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:47:44: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:44: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:47:55: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:01: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:01: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:01: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:01: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:01: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:01: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:02: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:38: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:40: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Permuting groups of gene with 3 sgRNAs per gene. Group progress: 3/12 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:46: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:47: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:47: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:47: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:48:47: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:43: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:50: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:51: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:51: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:49:51: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:50:50: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:50:56: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:50:56: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:50:56: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:50:57: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:50:57: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Permuting groups of gene with 4 sgRNAs per gene. Group progress: 4/12 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:00: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:01: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:51:01: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:20: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:20: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:26: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:52:27: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:41: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:47: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:47: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:47: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:56: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:56: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:56: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:56: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:56: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Permuting groups of gene with 5 sgRNAs per gene. Group progress: 5/12 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:57: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:58: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:53:58: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:18: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:18: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:26: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:30: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:30: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:30: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:30: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:44: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:45: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:45: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:55:45: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Permuting groups of gene with 6 sgRNAs per gene. Group progress: 6/12 
+INFO  @ Tue, 18 Aug 2026 10:57:19: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:20: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:57:21: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:58:59: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 10:58:59: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:06: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:07: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:08: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 10:59:08: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:00:47: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:47: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:47: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:52: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:52: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:52: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:52: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:58: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:58: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Permuting groups of gene with 7 sgRNAs per gene. Group progress: 7/12 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:00:59: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:01:00: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:01:00: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:01:00: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:01:00: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:50: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:50: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:53: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:54: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:54: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:54: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:02:54: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:44: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:44: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Permuting groups of gene with 8 sgRNAs per gene. Group progress: 8/12 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:46: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:47: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:47: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:04:47: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:29: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:42: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:42: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:42: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:47: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:48: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:48: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:48: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:06:48: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:30: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:47: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:47: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:47: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Permuting groups of gene with 9 sgRNAs per gene. Group progress: 9/12 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:08:50: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:08:51: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:51: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:10:52: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:12:50: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:12:50: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:12:50: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:12:50: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:12:52: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:12:54: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:12:54: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Permuting groups of gene with 10 sgRNAs per gene. Group progress: 10/12 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:00: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:01: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:01: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:01: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:01: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:13:01: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:14:55: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:14:57: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:14:57: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:14:58: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:15:00: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:15:03: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:15:05: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:15:05: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:15:05: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:15:05: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:06: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:15:07: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Permuting groups of gene with 12 sgRNAs per gene. Group progress: 11/12 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Start permuting 2 rounds ... 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Collecting 7768 sgRNAs from 2232 genes. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Permuting round 0 ... 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:15: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:17:16: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:25: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:31: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:45: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Permuting round 1 ... 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 0 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 0: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 1 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 1: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 2 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 2: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 3 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 3: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 4 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 4: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 5 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 5: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 6 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 7 started. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 6: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 7: total 279 instances. 
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 0: Calculating ABCC2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 1: Calculating ABCC8 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 2: Calculating ABCC9 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 3: Calculating ABCE1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 5: Calculating ABL1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 4: Calculating ABCG1 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:46: Thread 7: Calculating ABO (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:19:47: Thread 6: Calculating ABL2 (1) ...  
+INFO  @ Tue, 18 Aug 2026 11:21:56: Thread 0 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:07: Thread 1 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Thread 2 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Thread 3 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Thread 4 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Thread 5 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Thread 6 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Thread 7 completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: All threads completed. 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Assigning p values... 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Groups of gene with 154 sgRNAs per gene: assigning p values based on previous group results. Group progress: 12/12 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Writing gene results to R1_MLE_Diff20_median.gene_summary.txt 
+INFO  @ Tue, 18 Aug 2026 11:22:08: Writing sgRNA results to R1_MLE_Diff20_median.sgrna_summary.txt 

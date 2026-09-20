@@ -1,0 +1,4 @@
+Samples baseline Lower Upper
+Diff    1        0     0
+Lower   1        1     0
+Upper   1        0     1
