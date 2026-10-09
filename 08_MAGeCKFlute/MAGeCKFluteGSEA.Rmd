@@ -1,0 +1,472 @@
+
+---
+title: "MAGeCKFlute GSEA and R1–R2 Correlation Analysis"
+author: "CLN5 Batten Disease Genetic Modifier Screen"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+# Overview
+
+This workflow performs gene set enrichment analysis (GSEA) on MAGeCK-MLE
+gene-level beta scores and assesses concordance between R1 and R2 results.
+
+Four GSEA analyses are performed:
+- R1 Upper Lysotracker (UL) versus D7
+- R1 Lower Lysotracker (LL) versus D7
+- R2 UL versus D7
+- R2 LL versus D7
+
+Non-targeting controls are excluded from pathway analysis. Pearson
+correlations compare R1 and R2 beta scores for UL and LL separately.
+
+## 1. Setup
+
+
+```{r setup, message=FALSE, warning=FALSE}
+library(MAGeCKFlute)
+library(dplyr)
+library(ggplot2)
+library(AnnotationDbi)
+library(org.Hs.eg.db)
+library(knitr)
+library(readxl)
+
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+
+# Load R1 and R2 MAGeCK2-MLE results
+R1_data <- read_excel(
+  "R1_MLE_Diff20_median.gene_summary.xlsx"
+)
+
+R2_data <- read_excel(
+  "R2_MAGECK2_Diff20_median.gene_summary.txt.xlsx"
+)
+
+# Create output directories
+dir.create("results", showWarnings = FALSE, recursive = TRUE)
+dir.create("figures", showWarnings = FALSE, recursive = TRUE)
+
+# Check expected columns
+required_cols <- c("Gene", "Lower|beta", "Upper|beta")
+
+stopifnot(all(required_cols %in% colnames(R1_data)))
+stopifnot(all(required_cols %in% colnames(R2_data)))
+
+# Exclude non-targeting controls
+R1_data <- R1_data %>%
+  filter(Gene != "non-targeting")
+
+R2_data <- R2_data %>%
+  filter(Gene != "non-targeting")
+
+# Summarise input gene counts
+data.frame(
+  Dataset = c("R1", "R2"),
+  Genes_after_NTC_exclusion = c(
+    nrow(R1_data),
+    nrow(R2_data)
+  )
+) %>%
+  kable(
+    caption = "Input gene counts after excluding non-targeting controls"
+  )
+
+```
+
+## 2. Map gene symbols to Entrez IDs
+
+The GSEA workflow uses Entrez identifiers for compatibility with the
+gene sets used by MAGeCKFlute. Symbols that map to multiple Entrez IDs
+are excluded to avoid ambiguous mappings. If multiple symbols map to
+the same Entrez ID, the symbol with the largest absolute beta score is
+retained for that comparison.
+
+```{r gene-mapping}
+prepare_rank <- function(data, beta_column) {
+
+  genes <- data %>%
+    transmute(
+      SYMBOL = as.character(Gene),
+      beta = as.numeric(.data[[beta_column]])
+    ) %>%
+    filter(
+      !is.na(SYMBOL),
+      SYMBOL != "",
+      is.finite(beta)
+    ) %>%
+    distinct(SYMBOL, .keep_all = TRUE)
+
+  input_symbols <- unique(genes$SYMBOL)
+
+  # Map recognised gene symbols directly.
+  direct_mapping <- AnnotationDbi::select(
+    org.Hs.eg.db,
+    keys = input_symbols,
+    keytype = "SYMBOL",
+    columns = c("SYMBOL", "ENTREZID")
+  ) %>%
+    filter(!is.na(ENTREZID)) %>%
+    transmute(
+      input_SYMBOL = SYMBOL,
+      SYMBOL,
+      ENTREZID = as.character(ENTREZID)
+    ) %>%
+    distinct()
+
+  # Identify symbols not recognised by the direct SYMBOL mapping.
+  unmapped_symbols <- setdiff(
+    input_symbols,
+    direct_mapping$input_SYMBOL
+  )
+
+  # Try mapping unrecognised symbols as aliases.
+  alias_mapping <- if (length(unmapped_symbols) > 0) {
+    AnnotationDbi::select(
+      org.Hs.eg.db,
+      keys = unmapped_symbols,
+      keytype = "ALIAS",
+      columns = c("ALIAS", "SYMBOL", "ENTREZID")
+    ) %>%
+      filter(!is.na(ENTREZID)) %>%
+      transmute(
+        input_SYMBOL = ALIAS,
+        SYMBOL,
+        ENTREZID = as.character(ENTREZID)
+      ) %>%
+      distinct()
+  } else {
+    data.frame(
+      input_SYMBOL = character(),
+      SYMBOL = character(),
+      ENTREZID = character()
+    )
+  }
+
+  mapping <- bind_rows(direct_mapping, alias_mapping) %>%
+    distinct(input_SYMBOL, SYMBOL, ENTREZID)
+
+  # Exclude input symbols that map to multiple Entrez IDs.
+  ambiguous_symbols <- mapping %>%
+    group_by(input_SYMBOL) %>%
+    summarise(n_ids = n_distinct(ENTREZID), .groups = "drop") %>%
+    filter(n_ids > 1) %>%
+    pull(input_SYMBOL)
+
+  mapping_unique <- mapping %>%
+    filter(!input_SYMBOL %in% ambiguous_symbols) %>%
+    distinct(input_SYMBOL, ENTREZID)
+
+  # Exclude every Entrez ID associated with multiple input symbols.
+  duplicated_entrez <- mapping_unique %>%
+    count(ENTREZID, name = "n_symbols") %>%
+    filter(n_symbols > 1) %>%
+    pull(ENTREZID)
+
+  mapping_clean <- mapping_unique %>%
+    filter(!ENTREZID %in% duplicated_entrez)
+
+  mapped <- genes %>%
+    inner_join(
+      mapping_clean,
+      by = c("SYMBOL" = "input_SYMBOL")
+    ) %>%
+    mutate(ENTREZID = as.character(ENTREZID))
+
+  rank_vector <- mapped$beta
+  names(rank_vector) <- mapped$ENTREZID
+  rank_vector <- sort(rank_vector, decreasing = TRUE)
+
+  list(
+    rank = rank_vector,
+    mapping = mapping,
+    ambiguous_symbols = ambiguous_symbols,
+    duplicated_entrez = duplicated_entrez,
+    mapped_genes = mapped,
+    input_genes = nrow(genes),
+    mapped_unique_genes = length(rank_vector)
+  )
+}
+
+R1_UL <- prepare_rank(R1_data, "Upper|beta")
+R1_LL <- prepare_rank(R1_data, "Lower|beta")
+R2_UL <- prepare_rank(R2_data, "Upper|beta")
+R2_LL <- prepare_rank(R2_data, "Lower|beta")
+
+mapping_QC <- data.frame(
+  Analysis = c("R1 UL", "R1 LL", "R2 UL", "R2 LL"),
+  Input_genes = c(
+    R1_UL$input_genes, R1_LL$input_genes,
+    R2_UL$input_genes, R2_LL$input_genes
+  ),
+  Unique_Entrez_genes = c(
+    R1_UL$mapped_unique_genes, R1_LL$mapped_unique_genes,
+    R2_UL$mapped_unique_genes, R2_LL$mapped_unique_genes
+  ),
+  Ambiguous_symbols = c(
+    length(R1_UL$ambiguous_symbols),
+    length(R1_LL$ambiguous_symbols),
+    length(R2_UL$ambiguous_symbols),
+    length(R2_LL$ambiguous_symbols)
+  )
+)
+
+write.csv(
+  mapping_QC,
+  "results/gene_mapping_QC.csv",
+  row.names = FALSE
+)
+
+kable(mapping_QC, caption = "Gene identifier mapping QC")
+```
+
+## 3. Run the four GSEA analyses
+
+Genes are ranked by signed beta score in descending order. Positive
+beta scores therefore occur at the top of the list and negative beta
+scores at the bottom.
+
+GSEA tests Gene Ontology Biological Process (GOBP) gene sets using
+MAGeCKFlute's `enrich.GSE()` function. A p-value cutoff of 1 retains
+the full results table for downstream FDR filtering.
+
+```{r run-gsea}
+run_gsea <- function(rank_vector) {
+  MAGeCKFlute::enrich.GSE(
+    rank_vector,
+    keytype = "Entrez",
+    type = "GOBP",
+    organism = "hsa",
+    pvalueCutoff = 1
+  )
+}
+
+R1_UL_GSEA <- run_gsea(R1_UL$rank)
+R1_LL_GSEA <- run_gsea(R1_LL$rank)
+R2_UL_GSEA <- run_gsea(R2_UL$rank)
+R2_LL_GSEA <- run_gsea(R2_LL$rank)
+
+gsea_results <- list(
+  R1_UL = as.data.frame(R1_UL_GSEA),
+  R1_LL = as.data.frame(R1_LL_GSEA),
+  R2_UL = as.data.frame(R2_UL_GSEA),
+  R2_LL = as.data.frame(R2_LL_GSEA)
+)
+
+# Save complete pathway tables, including nonsignificant pathways.
+for (nm in names(gsea_results)) {
+  write.csv(
+    gsea_results[[nm]],
+    file.path("results", paste0(nm, "_GSEA_all_pathways.csv")),
+    row.names = FALSE
+  )
+}
+
+gsea_QC <- data.frame(
+  Analysis = names(gsea_results),
+  Genes_in_rank = c(
+    length(R1_UL$rank), length(R1_LL$rank),
+    length(R2_UL$rank), length(R2_LL$rank)
+  ),
+  Pathways_returned = vapply(gsea_results, nrow, integer(1)),
+  NA_pvalues = vapply(
+    gsea_results,
+    function(x) sum(is.na(x$pvalue)),
+    integer(1)
+  ),
+  FDR_below_0.05 = vapply(
+    gsea_results,
+    function(x) sum(x$p.adjust < 0.05, na.rm = TRUE),
+    integer(1)
+  )
+)
+
+write.csv(
+  gsea_QC,
+  "results/GSEA_QC_summary.csv",
+  row.names = FALSE
+)
+
+kable(gsea_QC, caption = "GSEA analysis QC summary")
+```
+
+## 4. Extract candidate pathways
+
+Candidate enriched pathways are defined using the thesis criteria:
+FDR-adjusted p-value below 0.05 and normalised enrichment score (NES)
+greater than 1. Depleted pathways with NES below -1 are also saved
+separately for exploratory interpretation.
+
+```{r significant-pathways}
+candidate_pathways <- lapply(names(gsea_results), function(nm) {
+  gsea_results[[nm]] %>%
+    filter(!is.na(p.adjust), !is.na(NES),
+           p.adjust < 0.05, NES > 1) %>%
+    mutate(Analysis = nm)
+}) %>%
+  bind_rows()
+
+depleted_pathways <- lapply(names(gsea_results), function(nm) {
+  gsea_results[[nm]] %>%
+    filter(!is.na(p.adjust), !is.na(NES),
+           p.adjust < 0.05, NES < -1) %>%
+    mutate(Analysis = nm)
+}) %>%
+  bind_rows()
+
+write.csv(
+  candidate_pathways,
+  "results/significant_enriched_pathways.csv",
+  row.names = FALSE
+)
+
+write.csv(
+  depleted_pathways,
+  "results/significant_depleted_pathways.csv",
+  row.names = FALSE
+)
+
+
+kable(
+  candidate_pathways %>%
+    dplyr::select(
+      Analysis, ID, Description, NES, pvalue, p.adjust, Count
+    ),
+  caption = "Significant enriched pathways (FDR < 0.05 and NES > 1)"
+)
+```
+
+## 5. Pearson correlation of R1 and R2 beta scores
+
+R1 and R2 results are paired by gene symbol. Non-targeting controls
+and genes without a finite beta score in either dataset are excluded.
+Pearson correlation assesses the linear concordance of gene-level
+effects between sequencing read orientations; it does not establish
+causation.
+
+```{r pearson-correlations}
+compare_beta <- function(column, population_label) {
+
+  
+paired <- R1_data %>%
+  dplyr::select(
+    Gene,
+    R1_beta = all_of(column)
+  ) %>%
+  dplyr::inner_join(
+    R2_data %>%
+      dplyr::select(
+        Gene,
+        R2_beta = all_of(column)
+      ),
+    by = "Gene"
+  ) %>%
+  dplyr::mutate(
+    R1_beta = as.numeric(R1_beta),
+    R2_beta = as.numeric(R2_beta)
+  ) %>%
+  dplyr::filter(
+    is.finite(R1_beta),
+    is.finite(R2_beta)
+  )
+
+  test <- cor.test(
+    paired$R1_beta,
+    paired$R2_beta,
+    method = "pearson"
+  )
+
+  plot <- ggplot(paired, aes(x = R1_beta, y = R2_beta)) +
+    geom_point(alpha = 0.55, size = 1.5) +
+    geom_smooth(method = "lm", se = FALSE, colour = "black") +
+    theme_classic(base_size = 12) +
+    labs(
+      title = paste("R1 versus R2 beta scores:", population_label),
+      subtitle = paste0(
+        "Pearson r = ", round(unname(test$estimate), 3),
+        "; p = ", signif(test$p.value, 3),
+        "; n = ", nrow(paired), " genes"
+      ),
+      x = "R1 gene-level beta score",
+      y = "R2 gene-level beta score"
+    )
+
+  ggsave(
+    filename = file.path(
+      "figures",
+      paste0("Pearson_R1_R2_", population_label, ".png")
+    ),
+    plot = plot,
+    width = 7,
+    height = 6,
+    dpi = 300
+  )
+
+  list(
+    plot = plot,
+    summary = data.frame(
+      Population = population_label,
+      Genes_compared = nrow(paired),
+      Pearson_r = unname(test$estimate),
+      P_value = test$p.value,
+      CI_lower = test$conf.int[1],
+      CI_upper = test$conf.int[2]
+    ),
+    paired_data = paired
+  )
+}
+
+pearson_UL <- compare_beta("Upper|beta", "UL")
+pearson_LL <- compare_beta("Lower|beta", "LL")
+
+pearson_summary <- bind_rows(
+  pearson_UL$summary,
+  pearson_LL$summary
+)
+
+write.csv(
+  pearson_summary,
+  "results/Pearson_R1_R2_correlation_summary.csv",
+  row.names = FALSE
+)
+
+write.csv(
+  pearson_UL$paired_data,
+  "results/Pearson_R1_R2_paired_beta_UL.csv",
+  row.names = FALSE
+)
+
+write.csv(
+  pearson_LL$paired_data,
+  "results/Pearson_R1_R2_paired_beta_LL.csv",
+  row.names = FALSE
+)
+
+pearson_UL$plot
+pearson_LL$plot
+
+kable(
+  pearson_summary,
+  digits = 4,
+  caption = "Pearson correlations between R1 and R2 gene-level beta scores"
+)
+```
+
+## 6. Session information
+
+Record software versions to support reproducibility.
+
+```{r session-info}
+sessionInfo()
+```
+
+
+
+
